@@ -35,9 +35,17 @@ async fn main(event: Value) -> Result<Value, Error> {
         ..Default::default()
     };
 
+    // FIXME Hardcoded value for now is ok as currently all photos are uploaded by me
+    // Adding stubbed value to enable API queries required by UI..
+    let owner = AttributeValue {
+        s: Option::from("darren.meehan".to_string()),
+        ..Default::default()
+    };
+
     let mut item: HashMap<String, AttributeValue> = HashMap::new();
     item.insert("id".to_string(), id_value);
-    item.insert("details".to_string(), details);
+    item.insert("Details".to_string(), details);
+    item.insert("OwnedBy".to_string(), owner);
     let input = PutItemInput {
         item,
         table_name,
