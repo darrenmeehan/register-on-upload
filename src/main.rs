@@ -46,6 +46,7 @@ async fn main(event: Value) -> Result<Value, Error> {
     let client = DynamoDbClient::new(Region::EuWest1);
     let response = client.put_item(input).await;
 
+    // FIXME Return response
     let response = match response {
         Ok(entry) => debug!("Added entry"), // FIXME Figure out how to log entry
         // FIXME Fail Lambda run on error
