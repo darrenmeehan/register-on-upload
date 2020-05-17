@@ -26,8 +26,6 @@ async fn main(event: Value) -> Result<Value, Error> {
     let id = event["Records"][0]["s3"]["object"]["key"].to_string();
     debug!("id={}", id);
 
-    example_logging();
-
     let details = AttributeValue {
         s: Option::from(image_information),
         ..Default::default()
@@ -65,11 +63,4 @@ fn get_dynamodb_table_name() -> String {
 fn get_image_information(event: &Value) -> String {
     let s3_object = event["Records"][0]["s3"]["object"].to_string();
     s3_object
-}
-
-fn example_logging() {
-    debug!("This is an example debug message.");
-    info!("This is an example info message.");
-    warn!("This is an example warn message.");
-    error!("This is an example error message.");
 }
