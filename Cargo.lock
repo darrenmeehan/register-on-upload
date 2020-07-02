@@ -785,7 +785,7 @@ dependencies = [
 [[package]]
 name = "lambda"
 version = "0.1.0"
-source = "git+https://github.com/awslabs/aws-lambda-rust-runtime/#ed3fd167528125b73ce47abfadc38cd274bf59bc"
+source = "git+https://github.com/awslabs/aws-lambda-rust-runtime/#e193e700cf158e357b6ab31eaec0e9990102e601"
 dependencies = [
  "bytes 0.5.4",
  "futures 0.3.4",
@@ -805,7 +805,7 @@ dependencies = [
 [[package]]
 name = "lambda-attributes"
 version = "0.1.0"
-source = "git+https://github.com/awslabs/aws-lambda-rust-runtime/#ed3fd167528125b73ce47abfadc38cd274bf59bc"
+source = "git+https://github.com/awslabs/aws-lambda-rust-runtime/#e193e700cf158e357b6ab31eaec0e9990102e601"
 dependencies = [
  "proc-macro2 0.4.30",
  "quote 1.0.3",
